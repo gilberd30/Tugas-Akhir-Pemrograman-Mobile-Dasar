@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_keranjang"
+        android:icon="@drawable/ic_kerangjang"
+        android:title="@string/action_keranjang"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/action_profil"
+        android:icon="@drawable/ic_accounts"
+        android:title="@string/action_profil"
+        app:showAsAction = "always"/>
+
+</menu>

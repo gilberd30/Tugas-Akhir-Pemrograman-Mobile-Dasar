@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.BottomNavigation">
+
+
+    <ScrollView
+        android:scrollbars="vertical"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"/>
+
+            <com.aplikasi.makala.utils.MSPTextViewBold
+                android:id="@+id/name"
+                android:layout_margin="10dp"
+                android:text="@string/app_name"
+                android:textSize="24sp"
+                android:textColor="@color/colorThemeDeepGreen"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.aplikasi.makala.utils.MSPTextView
+                android:id="@+id/harga"
+                android:layout_marginLeft="20dp"
+                android:text="@string/app_name"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="350dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.aplikasi.makala.utils.MSPTextView
+                    android:id="@+id/deskripsi"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/app_name"
+                    android:textSize="14sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp">
+
+                    <View
+                        android:background="@drawable/ic_baseline_location_on_24"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"/>
+
+                    <com.aplikasi.makala.utils.MSPTextView
+                        android:id="@+id/lokasi"
+                        android:gravity="center_vertical"
+                        android:text="@string/app_name"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp">
+
+                    <View
+                        android:background="@drawable/ic_baseline_access_time_24"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"/>
+
+                    <com.aplikasi.makala.utils.MSPTextView
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/operasional"
+                        android:text="@string/app_name"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/user_image_background"/>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/jenis_pembelian"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profil_radio_buton_height"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <com.aplikasi.makala.utils.MSPRadioButton
+                    android:id="@+id/booking"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/profil_radio_buton_marginStartEnd"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="di Jemput ?"
+                    android:textColor="@drawable/drawble_gender_tab_text_color_selector"
+                    android:background="@drawable/drawable_gender_tab_selector"
+                    android:textStyle="bold"/>
+
+                <com.aplikasi.makala.utils.MSPRadioButton
+                    android:id="@+id/antar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/profil_radio_buton_marginStartEnd"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="di Antar ?"
+                    android:textColor="@drawable/drawble_gender_tab_text_color_selector"
+                    android:background="@drawable/drawable_gender_tab_selector"
+                    android:textStyle="bold"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_background"
+            android:text="@string/btn_lanjutkan"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
